@@ -723,7 +723,7 @@ firestore:
 # Show Views / Visitors of the website / page with busuanzi.
 # Get more information on http://ibruce.info/2015/04/04/busuanzi
 busuanzi_count:
-  enable: false
+  enable: true
   total_visitors: true
   total_visitors_icon: fa fa-user
   total_views: true
@@ -1011,3 +1011,5 @@ images: images
 cursor_effect:
   enabled: true
   type: love  # fireworks：礼花 | explosion：爆炸 | love：浮出爱心 | text：浮出文字
+  
+
