@@ -2,6 +2,11 @@
 title: Linux下TCP常用函数
 date: 2022-09-25 07:38:35
 tags:
+- linux
+- tcp/ip
+- socket
+- 嵌入式
+categories: Linux
 ---
 ## 1、IPV4地址转换  
 # inet_addr()  
