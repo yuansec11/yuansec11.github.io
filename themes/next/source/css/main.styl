@@ -152,16 +152,24 @@ body {
 .photos-page {
 	margin-top: -50px;
 }
-.img-list,
-.photos-list {
+
+.img-list{
 	display: flex;
-	flex-direction: row;
-	flex-wrap: nowrap;
-	align-items: flex-start;
+	flex-direction: column;//垂直为主轴
+}
+.photos-list {
+	display: flex;//指定容器
+	flex-direction: row;//水平为主轴
+	flex-wrap: nowrap;//不自动换行
+	justify-content: space-between;//两侧对其
+	align-items: flex-start;//水平对齐
 }
 .img-column {
 	display: flex;
-	flex-direction: column-reverse;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	align-items: flex-start
 }
 .img-column a,
 .photos-column a {
@@ -186,6 +194,12 @@ body {
 	width: 300px;
 	object-fit: cover;
 }
+.img-column a img {
+	height: 280px;
+	width: 330px;
+	object-fit: scale-down;
+}
+
 @media (max-width: 767px){
 	.photos-item p {
 		min-width: 75px;
