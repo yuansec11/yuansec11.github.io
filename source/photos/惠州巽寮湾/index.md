@@ -35,7 +35,7 @@
 			<img src="https://s1.ax1x.com/2022/09/28/xmNW28.jpg"></a>
 			<img src="https://s1.ax1x.com/2022/09/28/xmNR8f.jpg"></a>
 		</div>
-		<div class="img-column">	
+		<div class="img1-column">	
 			<img src="https://s1.ax1x.com/2022/09/28/xmN2PP.jpg"></a>
 		</div>
 	</div>

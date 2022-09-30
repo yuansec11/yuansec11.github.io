@@ -11,6 +11,14 @@ type: photos
 				<br>
 				<p>-惠州巽寮湾-</p>
 			</div>
+			<br>
+			<br>
+			<div class="photos-item">
+				<a href="小动物"><img src="https://s1.ax1x.com/2022/09/30/xu9dot.jpg">
+				</a>
+				<br>
+				<p>-小动物-</p>
+			</div>
 		</div>
 		<div class="photos-column">
 			<div class="photos-item">
@@ -18,6 +26,14 @@ type: photos
 				</a>
 				<br>
 				<p>- 广州 -</p>
+			</div>
+			<br>
+			<br>
+			<div class="photos-item">
+				<a href="爬山趣"><img src="https://s1.ax1x.com/2022/09/30/xui0F1.jpg">
+				</a>
+				<br>
+				<p>-爬山趣-</p>
 			</div>
 		</div>
 		<div class="photos-column">
