@@ -8,7 +8,7 @@ tags:
 - 嵌入式
 categories: Linux
 ---
-## 1、IPV4地址转换  
+## IPV4地址转换  
 # inet_addr()  
 头文件：#include <sys/socket.h>  
 定义函数：in_addr_t inet_addr(const char *cp);  
@@ -32,7 +32,7 @@ categories: Linux
 第一个参数为要转换的字符串。  
 第二个参数为转换结果。  
 返回值：成功返回0，否则返回非0值。  
-## 2、地址类型转换
+## 地址类型转换
 # inet_pton()
 头文件：#include <sys/socket.h>  
 定义函数：int inet_pton(int af, const char* src, void* dst);  
@@ -50,7 +50,7 @@ categories: Linux
 第三个参数：缓冲区，接收转换结果  
 第四个参数：缓冲区大小  
 返回值：成功返回1，如果函数出错将返回一个负值。 
-## 3、字节顺序转换函数
+## 字节顺序转换函数
 # ntohl()
 头文件：#include <arpa/inet.h>  
 定义函数：unsigned long int ntohl(unsigned long int);  
@@ -74,7 +74,7 @@ categories: Linux
 
 **在这几个函数中n代表net网络，h代表host主机，l代表long长整型，s代表short短整型。**
 
-## 4、socket编程
+## socket编程
 # socket()
 头文件：#include <sys/socket.h>  
 定义函数：int socket(int af, int type, int protocol);  
@@ -137,7 +137,7 @@ categories: Linux
 定义函数：int close(int sockfd);  
 函数说明：关闭socket对象。  
 返回值：成功返回0，失败返回-1。
-## 5、socket多路复用
+## socket多路复用
 # select()
 头文件：#include <sys/select.h>  
 定义函数：int select(int nfds, fd_set *readfds, fd_set *writefds,fd_set *exceptfds, struct timeval *timeout);
@@ -164,7 +164,7 @@ categories: Linux
 头文件：#include <unistd.h>  
 定义函数：FD_ISSET(int fd, fd_set* fdset);  
 函数说明：若参数fd_set指向的变量中包含文件描述符fd的信息，则返回真。
-## 6、socket文件属性
+## socket文件属性
 # getsockopt()
 头文件：#include <sys/socket.h>  
 定义函数：int getsockopt(int sockfd, int level, int optname, void *optval, socklen_t *optlen);
@@ -185,7 +185,7 @@ categories: Linux
 第四个参数：指向包含新选项值的地址  
 第五个参数：现选项的长度  
 返回值：成功返回0。失败返回-1
-## 7、域名和IP信息解析
+## 域名和IP信息解析
 # gethostbyname()
 头文件：#include <sys/socket.h>  
 定义函数：struct hostent *gethostbyname(const char *name);  

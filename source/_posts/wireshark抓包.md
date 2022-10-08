@@ -1,0 +1,62 @@
+---
+title: wireshark抓包
+date: 2022-10-08 10:42:36
+categories: 嵌入式
+tags: 
+- wireshark
+- tcp/ip
+---
+# 下载软件并安装
+软件下载地址：https://www.wireshark.org/#download  
+安装的话一直点next，默认就可以了  
+<!--more--> 
+# 电脑和设备通讯抓包
+这里以modbus tcp通讯为例，设备做主站，电脑做从站，我的设备本身的ip是192.168.0.200，目标ip是192.168.0.13，端口是502，那么需要将电脑以太网的ip设置为192.168.0.13，如下图所示：
+[![x8IjIK.png](https://s1.ax1x.com/2022/10/08/x8IjIK.png)](https://imgse.com/i/x8IjIK)
+
+接着电脑打开modbus slave软件，建立通讯连接
+[![x8IbrR.png](https://s1.ax1x.com/2022/10/08/x8IbrR.png)](https://imgse.com/i/x8IbrR)
+然后打开wireshark软件，选择通讯的以太网端口点进去
+[![x8IOVx.png](https://s1.ax1x.com/2022/10/08/x8IOVx.png)](https://imgse.com/i/x8IOVx)
+可以看到有大量数据包，如果没有就点击左上角文件下方的图标抓取
+[![x8IXa6.png](https://s1.ax1x.com/2022/10/08/x8IXa6.png)](https://imgse.com/i/x8IXa6)
+接着随便点一条数据包，来分析其构成
+[![x8Iqq1.png](https://s1.ax1x.com/2022/10/08/x8Iqq1.png)](https://imgse.com/i/x8Iqq1)
+***
+第一栏的数据表示整条数据包
+[![x8IxPO.png](https://s1.ax1x.com/2022/10/08/x8IxPO.png)](https://imgse.com/i/x8IxPO)
+***
+第二栏的数据是以太网链路层数据，主要包括目的MAC地址和源MAC地址，还有类型，类型主要有IP、ARP、RARP
+[![x8IzGD.png](https://s1.ax1x.com/2022/10/08/x8IzGD.png)](https://imgse.com/i/x8IzGD)
+第三栏是IP层数据，每一栏分别包含以下这些数据：  
+（1）版本（Version）  
+（2）包头的长度  
+（3）服务类型  
+（4）总长度  
+（5）识别码  
+（6）特殊旗标  
+（7）分段偏移  
+（8）TTL存活时间  
+（9）协议代码  
+（10）包头校验码  
+（11）源地址  
+（12）目的地址  
+[![xGPEGQ.png](https://s1.ax1x.com/2022/10/08/xGPEGQ.png)](https://imgse.com/i/xGPEGQ)
+***
+[![x8IzGD.png](https://s1.ax1x.com/2022/10/08/x8IzGD.png)](https://imgse.com/i/x8IzGD)
+第四栏是数据层，主要包含这些数据：  
+（1）源端口和目的端口  
+（2）数据包序号  
+（3）保留位  
+（4）控制标志码（包含URG、ACK、PSH、RST、SYN、FIN这些字段）  
+（5）滑动窗口  
+（6）确认校验码  
+（7）紧急信息  
+[![xGPAPg.png](https://s1.ax1x.com/2022/10/08/xGPAPg.png)](https://imgse.com/i/xGPAPg)
+***
+[![x8opxH.png](https://s1.ax1x.com/2022/10/08/x8opxH.png)](https://imgse.com/i/x8opxH)
+最后就是modbus tcp的数据包了，通讯的数据就都在这里。
+# 设备和设备通讯抓包
+设备之间通讯想要抓包的话，就必须使用到镜像交换机，比如我这种：
+[![xGPV2j.jpg](https://s1.ax1x.com/2022/10/08/xGPV2j.jpg)](https://imgse.com/i/xGPV2j)
+其中监控口是连接电脑以太网端口，1、2、3口任意连接设备，抓包过程和上面的一样，唯一不同的地方就是，电脑以太网ip只需同网段即可，不能设置和设备相同的ip，不然会造成IP冲突。
