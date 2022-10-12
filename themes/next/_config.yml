@@ -123,6 +123,7 @@ menu:
   archives: /archives/ || fa fa-archive
   photos: /photos/ || fa photos
   code: /code/ || fa code
+  growth: /growth/ || fa growth
   #schedule: /schedule/ || fa fa-calendar
   #sitemap: /sitemap.xml || fa fa-sitemap
   #commonweal: /404/ || fa fa-heartbeat
@@ -403,7 +404,7 @@ bookmark:
 
 # `Follow me on GitHub` banner in the top-right corner.
 github_banner:
-  enable: true
+  enable: false
   permalink: https://github.com/yuansec11
   title: Follow me on GitHub
 
