@@ -9,12 +9,12 @@ tags:
 ---
 ***
 <!--more-->  
-[![xGk7Se.png](https://s1.ax1x.com/2022/10/08/xGk7Se.png)](https://imgse.com/i/xGk7Se)
-[![xGkOeI.png](https://s1.ax1x.com/2022/10/08/xGkOeI.png)](https://imgse.com/i/xGkOeI)
-[![xGkqOA.png](https://s1.ax1x.com/2022/10/08/xGkqOA.png)](https://imgse.com/i/xGkqOA)
-[![xGkHQH.png](https://s1.ax1x.com/2022/10/08/xGkHQH.png)](https://imgse.com/i/xGkHQH)
-[![xGkbyd.png](https://s1.ax1x.com/2022/10/08/xGkbyd.png)](https://imgse.com/i/xGkbyd)
-[![xGkoWD.png](https://s1.ax1x.com/2022/10/08/xGkoWD.png)](https://imgse.com/i/xGkoWD)
+![](https://s1.ax1x.com/2022/10/08/xGk7Se.png)
+![](https://s1.ax1x.com/2022/10/08/xGkOeI.png)
+![](https://s1.ax1x.com/2022/10/08/xGkqOA.png)
+![](https://s1.ax1x.com/2022/10/08/xGkHQH.png)
+![](https://s1.ax1x.com/2022/10/08/xGkbyd.png)
+![](https://s1.ax1x.com/2022/10/08/xGkoWD.png)
 
 a == b	a与b是否相等 （a、b是数值）  
 a -ge b	a 是否大于等于 b  

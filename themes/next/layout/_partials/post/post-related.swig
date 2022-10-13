@@ -1,5 +1,7 @@
 {%- set popular_posts = popular_posts_json(theme.related_posts.params, page) %}
 {%- if popular_posts.json and popular_posts.json.length > 0 %}
+  <div class="post-body">
+  <div class="note primary">
   <div class="popular-posts-header">{{ theme.related_posts.title or __('post.related_posts') }}</div>
   <ul class="popular-posts">
   {%- for popular_post in popular_posts.json %}
@@ -17,4 +19,6 @@
     </li>
   {%- endfor %}
   </ul>
+  </div>
+  </div>
 {%- endif %}
